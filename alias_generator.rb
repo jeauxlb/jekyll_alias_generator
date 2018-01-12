@@ -40,7 +40,7 @@ module Jekyll
 
     def process_posts
       @site.posts.each do |post|
-        generate_aliases(post.url, post.data['alias'])
+        generate_aliases(post.url, "/archives/" << post.data['wordpress_id'].to_s))
       end
     end
 
